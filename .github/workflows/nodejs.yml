@@ -10,7 +10,7 @@ on:
 # ここだけ変更++
   #push:
   #  branches: [ master ]
-  #  # プッシュ時に動作する
+  ## プッシュ時に動作する
 
 jobs:
   build:
