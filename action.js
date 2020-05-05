@@ -3,6 +3,7 @@ const qs = require('querystring');
 
 const LINE_NOTIFY_API_URL = 'https://notify-api.line.me/api/notify';
 const LINE_NOTIFY_TOKEN = process.env.LINE_TOKEN;
+//const LINE_NOTIFY_TOKEN = '';
 
 let config = {
     url: LINE_NOTIFY_API_URL,
