@@ -37,8 +37,8 @@ jobs:
         run: npm i
       # Node.js 自体の準備や npm install ができたので、いよいよ node action.js でプログラムを実行
       # Secret の LINE_TOKEN 値 を action.js に渡している
-      - name: yamanote.js
-        run: node yamanote.js
+      - name: kanagawa.js
+        run: node kanagawa.js
 
       # LINE Notify にメッセージが行く
       - name: LINE Notify action.js
