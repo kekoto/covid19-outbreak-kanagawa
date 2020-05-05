@@ -8,6 +8,9 @@ on:
   schedule:
     - cron: "*/5 * * * *"
 # ここだけ変更++
+  push:
+    branches: [ master ]
+    # プッシュ時に動作する
 
 jobs:
   build:
@@ -34,9 +37,13 @@ jobs:
         run: npm i
       # Node.js 自体の準備や npm install ができたので、いよいよ node action.js でプログラムを実行
       # Secret の LINE_TOKEN 値 を action.js に渡している
-      # LINE Notify にメッセージが行く
       - name: yamanote.js
         run: node yamanote.js
+
+      # LINE Notify にメッセージが行く
+      - name: LINE Notify app.js
+        run: LINE_TOKEN=${{secrets.LINE_TOKEN}} node action.js
+
 
       # git addとgit commitをする
       - name: Commit files
