@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Hello My WebSite!</title>
+  </head>
+  <body>
+    <p>Hello, ProtoOut! jsonを表示する6</p>
+
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            },
+            methods: {
+                getData: async function(){
+                    const response = await axios.get('data.json'); 
+                    //const response = await axios.get('http://weather.livedoor.com/forecast/webservice/json/v1?city=130010')
+                    console.log(response.data);
+                    this.message = response.data
+                },
+            },
+
+            mounted: function(){
+                this.getData();
+            }
+        })
+    </script>
+  </body>
+</html>
