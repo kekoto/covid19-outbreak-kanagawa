@@ -56,9 +56,15 @@ async function getRequest() {
 
     // 最新の情報に書き換え
     kanagawaData.new = saveData;
+    //console.log(kanagawaData.old[0]);
+    //console.log(kanagawaData.new);
 
     // 変更されているか確認
-    if( !Object.is(kanagawaData.new,kanagawaData.old) ){        
+    //kanagawaData.new[0][shichoson[0]] = 2222;
+    //console.log(kanagawaData.old[0][shichoson[0]]);
+    //console.log(kanagawaData.new[0][shichoson[0]]);
+    //if( !Object.is(kanagawaData.new,kanagawaData.old) ){        
+    if( JSON.stringify(kanagawaData.new) != JSON.stringify(kanagawaData.old)){        
       // 変更があれば更新
       const saveData0 = kanagawaData;
       await updateData(saveData0); //データ更新関数を実行
@@ -70,7 +76,7 @@ async function getRequest() {
       console.log('神奈川県で新規感染者が確認されました');
     }
     else {
-      console.log('神奈川県の感染者数に変化はありません');
+      console.log('神奈川県の感染者数の増加はありません');
      }
    }catch (error) {
      console.error(error);
