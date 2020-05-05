@@ -41,7 +41,7 @@ jobs:
         run: node yamanote.js
 
       # LINE Notify にメッセージが行く
-      - name: LINE Notify app.js
+      - name: LINE Notify action.js
         run: LINE_TOKEN=${{secrets.LINE_TOKEN}} node action.js
 
 
