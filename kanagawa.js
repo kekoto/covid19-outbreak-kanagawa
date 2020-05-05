@@ -69,11 +69,11 @@ async function getRequest() {
       const saveData0 = kanagawaData;
       await updateData(saveData0); //データ更新関数を実行
  
-      const message = 'kanawawa.jsから'
+      const message = '神奈川県で新規感染者が確認されました'
       linenotify({
         message: message,
       })
-      console.log('神奈川県で新規感染者が確認されました');
+      console.log(message);
     }
     else {
       console.log('神奈川県の感染者数の増加はありません');
