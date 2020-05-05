@@ -1,0 +1,23 @@
+{
+  "name": "01-07-git-kanagawa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kekoto/covid19-outbreak-kanagawa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kekoto/covid19-outbreak-kanagawa/issues"
+  },
+  "homepage": "https://github.com/kekoto/covid19-outbreak-kanagawa#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
