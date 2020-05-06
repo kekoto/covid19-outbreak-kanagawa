@@ -66,8 +66,8 @@ async function getRequest() {
     //if( !Object.is(kanagawaData.new,kanagawaData.old) ){        
     if( JSON.stringify(kanagawaData.new) != JSON.stringify(kanagawaData.old)){        
       // 変更があれば更新
-      const saveData0 = kanagawaData;
-      await updateData(saveData0); //データ更新関数を実行
+      //const saveData0 = kanagawaData;
+      await updateData(kanagawaData); //データ更新関数を実行
  
       const message = '神奈川県で新規感染者が確認されました'
       linenotify({
