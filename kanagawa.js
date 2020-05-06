@@ -24,8 +24,8 @@ async function getRequest() {
     //console.log(html);
 
     //市町村情報
-    let unko = html.match(/居住地別累計(.*?)<\/tbody>/)[1];
-    let shichoson = unko.match(/bg_blue">(.*?)<\/td>/g);
+    let ruikei = html.match(/居住地別累計(.*?)<\/tbody>/)[1];
+    let shichoson = ruikei.match(/bg_blue">(.*?)<\/td>/g);
     let kazu = unko.match(/enter;">(.*?)<\/td>/g);
     shichoson = shichoson.map(item => item.match(/bg_blue">(.*?)<\/td>/)[1])
     kazu = kazu.map(item => item.match(/enter;">(.*?)<\/td>/)[1])
