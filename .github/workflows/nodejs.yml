@@ -6,7 +6,7 @@ name: JSON UPDATE
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/60 * * * *"
   # ここだけ変更++
   #push:
   #  branches: [ master ]
